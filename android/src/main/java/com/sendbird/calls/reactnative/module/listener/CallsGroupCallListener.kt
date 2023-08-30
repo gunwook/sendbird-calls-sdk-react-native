@@ -162,8 +162,7 @@ class CallsGroupCallListener(private val root: CallsModule, private val room: Ro
     override fun onInvitationAccepted(roomInvitation: RoomInvitation) {
     }
 
-    override fun onInvitationCanceled(roomInvitation: RoomInvitation) {
-    }
+    override fun onInvitationCanceled(roomInvitation: RoomInvitation) {}
 
     companion object {
         private val listeners = mutableMapOf<String, CallsGroupCallListener>()
