@@ -166,6 +166,10 @@ class CallsGroupCallListener(private val root: CallsModule, private val room: Ro
 
     override fun onInvitationDeclined(roomInvitation: RoomInvitation) {}
 
+    override fun onLocalParticipantDisconnected(participant: LocalParticipant) {}
+    override fun onLocalParticipantReconnected(participant: LocalParticipant) {}
+
+
     companion object {
         private val listeners = mutableMapOf<String, CallsGroupCallListener>()
         fun get(root: CallsModule, room: Room): CallsGroupCallListener = listeners[room.roomId] ?: run {
