@@ -159,6 +159,10 @@ class CallsGroupCallListener(private val root: CallsModule, private val room: Ro
         )
     }
 
+    override fun onInvitationAccepted(roomInvitation: RoomInvitation) {
+
+    }
+
     companion object {
         private val listeners = mutableMapOf<String, CallsGroupCallListener>()
         fun get(root: CallsModule, room: Room): CallsGroupCallListener = listeners[room.roomId] ?: run {
